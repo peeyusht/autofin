@@ -1,0 +1,50 @@
+<template name="navigation">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+
+            <!-- Close canvas menu used only on OffCanvas page -->
+            <!-- You can remove this tag if you dont use offCanvas menu -->
+            <a class="close-canvas-menu"><i class="fa fa-times"></i></a>
+            <!-- End offCanvas menu toggle -->
+
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header"></li>
+                {{#if isInRole 'Admin'}}
+                  <li class="{{isActivePath regex='/dashboard2'}}">
+                      <a href="dashboard"><i class="fa fa-th-large"></i> <span class="nav-label" data-i18n="nav.dashboard">Dashboard</span> </a>
+                  </li>
+                {{/if}}
+                <li class="{{isActivePath regex='c3charts|graphFlot|graphMorris|graphRickshaw|graphChartJs|graphPeity|graphSparkline|graphChartist'}}">
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label" data-i18n="nav.graphs">Data Entry</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse {{isActivePath regex='c3charts|graphFlot|graphMorris|graphRickshaw|graphChartJs|graphPeity|graphSparkline|graphChartist' className='in'}}">
+                        <li class="{{isActivePath regex='/insuranceList'}}"><a href="insuranceList">Cover Note</a></li>
+                        <li class="{{isActivePath regex='/bookInsurance'}}"><a href="bookInsurance">Book Insurance</a></li>
+                        <li class="{{isActivePath regex='/renewals'}}"><a href="renewals">Renewals</a></li>
+
+                    </ul>
+                </li>
+                {{#if isInRole 'Admin'}}
+                  {{> adminMenu}}
+                {{/if}}
+            </ul>
+
+        </div>
+    </nav>
+</template>
+
+<template name="adminMenu">
+  <li class="{{isActivePath regex='autocomplete|markdown|formBasic|formAdvanced|formWizard|formUpload|textEditor'}}">
+      <a href="#"><i class="fa fa-edit"></i> <span class="nav-label" data-i18n="nav.forms">Admin</span><span class="fa arrow"></span></a>
+      <ul class="nav nav-second-level collapse {{isActivePath regex='autocomplete|markdown|formBasic|formAdvanced|formWizard|formUpload|textEditor' className='in'}}">
+        <li class="{{isActivePath regex='/teamCommissionList'}}"><a href="teamCommissionList">Team Commission</a></li>
+        <li class="{{isActivePath regex='/insuranceCompanyList'}}"><a href="insuranceCompanyList">Insurance Company</a></li>
+        <li class="{{isActivePath regex='/insuranceCategoryList'}}"><a href="insuranceCategoryList">Insurance Category</a></li>
+        <li class="{{isActivePath regex='/productList'}}"><a href="productList">Product</a></li>
+        <li class="{{isActivePath regex='/vehicleList'}}"><a href="vehicleList">Vehicle</a></li>
+        <li class="{{isActivePath regex='/branchList'}}"><a href="branchList">Branch</a></li>
+        <li class="{{isActivePath regex='/teamList'}}"><a href="teamList">Team</a></li>
+        <li class="{{isActivePath regex='/userList'}}"><a href="userList">Users</a></li>
+        <li class="{{isActivePath regex='/settings'}}"><a href="settings">Settings</a></li>
+      </ul>
+  </li>
+</template>

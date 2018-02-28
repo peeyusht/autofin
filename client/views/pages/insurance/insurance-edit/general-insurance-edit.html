@@ -1,0 +1,124 @@
+<template name="generalInformation">
+  <div id="generalInformation">
+    <div id="generalInformation1">
+
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10">
+          <h2>General Information</h2>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <strong>{{statusLabel}}</strong>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="form-group">
+            <label>Cover Note/Policy No.</label>
+            <input id="coverNote" name="coverNote" type="text" class="form-control required" value={{insurance.coverNote}}>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="form-group" id="date_date">
+            <label class="font-normal">Issue Date</label>
+            <div class="input-group date">
+              <span class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </span>
+              <input id="issueDate" name="issueDate" type="text" data-date-format='yy-mm-dd' class="form-control required" value={{insurance.issueDate}}>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="form-group" id="date_date">
+            <label class="font-normal">Start Date</label>
+            <div class="input-group date">
+              <span class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </span>
+              <input id="startDate" name="startDate" type="text" class="form-control required" value={{insurance.startDate}}>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="form-group" id="date_date">
+            <label class="font-normal">End Date</label>
+            <div id="endDate">{{insurance.endDate}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+            <label>Insurance Company *</label>
+            <div>
+              <select id="insuranceCompany" data-placeholder="Insurance Company" class="chosen-select" tabindex="2">
+                {{#each insuranceCompany}}
+                <option {{isSelectedInsuranceCompany _id}} value={{_id}}>{{name}}</option>
+
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="form-group">
+            <label>Product *</label>
+            <div>
+              <select id="product" data-placeholder="Product" class="chosen-select" tabindex="2">
+                {{#each product}}
+                <option value={{_id}} {{isSelectedProduct _id}}>{{name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+            <label>Category *</label>
+            <div>
+              <select id="insuranceCategory" data-placeholder="Insurance Category" class="chosen-select" tabindex="2">
+                {{#each insuranceCategory}}
+                <option value={{_id}} {{isSelectedInsuranceCategory _id}}>{{name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+            <label>Branch *</label>
+            <div id="branchName">
+              {{branch.name}}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+            <label>Team Name*</label>
+            <div>
+              <select id="team" data-placeholder="Team" class="chosen-select" tabindex="2">
+                {{#each team}}
+                <option value={{_id}} {{isSelectedTeam _id}}>{{name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</template>

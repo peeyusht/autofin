@@ -1,0 +1,41 @@
+<template name="insuranceCompanyEdit">
+
+  <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Edit Insurance Company</h5>
+                    <button id="back" class="btn btn-warning btn-outline pull-right">Back</button>
+                </div>
+                <div class="ibox-content">
+                <form id="form" action="#" class="wizard-big">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                  <label>Name *</label>
+                                  <input id="insuranceCompanyName" name="insuranceCompanyName" type="text" class="form-control required" value="{{insuranceCompany.name}}">
+                                </div>
+                                <div class="form-group">
+                                  <label>Address *</label>
+                                  <input id="insuranceCompanyAddress" name="insuranceCompanyAddress" type="text" class="form-control required" value="{{insuranceCompany.address}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                            <button id="resetCommission" class="btn btn-info pull-left">Reset Commission</button>
+                            <button id="cancel" class="btn btn-warning pull-right">Cancel</button>
+                            <button id="save" class="btn btn-success pull-right">Save</button>
+                          </div>
+                        </div>
+                    </fieldset>
+                </form>
+              </div>
+          </div>
+          {{> insuranceCompanyCommissionList}}
+      </div>
+    </div>
+  </div>
+</template>

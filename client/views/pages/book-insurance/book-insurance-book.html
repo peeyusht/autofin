@@ -1,0 +1,96 @@
+<template name="bookInsuranceBook">
+  <div class="modal inmodal" id="bookInsuranceBookModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Book Insurance</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form" action="#" class="wizard-big">
+            <fieldset>
+              <div class="row">
+                <div class="col-md-12">
+                  <h3>Cover Note: <strong>{{insurance.coverNote}}</strong></h3>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                  <label class="font-normal">Issue Date</label>
+                  <h4><strong>{{formatDate insurance.issueDate}}</strong></h4>
+                </div>
+                <div class="col-md-4">
+                  <label class="font-normal">Start Date</label>
+                  <h4><strong>{{formatDate insurance.startDate}}</strong></h4>
+                </div>
+                <div class="col-md-4">
+                  <label class="font-normal">End Date</label>
+                  <h4><strong>{{formatDate insurance.endDate}}</strong></h4>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-normal">Insurance Co.</label>
+                  <h4><strong>{{insurance.insuranceCompanyObj.name}}</strong></h4>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-normal">Insurance Category</label>
+                  <h4><strong>{{insurance.insuranceCategoryObj.name}}</strong></h4>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-normal">Customer</label>
+                  <h4><strong>{{insurance.customerName}}</strong></h4>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-normal">Premium</label>
+                  <h4><strong>{{insurance.grandTotal}}</strong></h4>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+                  <label class="font-normal">Policy no.</label>
+                  <input id="policyNo" type="text" class="form-control required">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 form-group">
+                  <div class="form-group" id="date_year">
+                    <label class="font-normal">Booking Month</label>
+                    <div class="input-group date readonly">
+                      <span class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                      </span>
+                      <input id="policyMonth" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="uploadPolicy" class="ibox col-lg-12 col-md-12 col-sm-12 form-group">
+                  <div class="ibox-content">
+                    <label class="font-normal">Upload Policy</label>
+
+                    <div class="input-group">
+                      <input id="uploadFileName" type="file" class="form-control">
+                      <span class="input-group-btn">
+                              <button id="uploadFileButton" type="button" class="btn btn-primary">Upload</button>
+                            </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel" data-dismiss="modal" class="btn btn-white">Cancel</button>
+          <button id="save" type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

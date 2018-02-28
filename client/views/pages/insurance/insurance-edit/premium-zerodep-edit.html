@@ -1,0 +1,284 @@
+<template name="premiumZeroDep">
+  <div id="premiumZeroDep">
+    <div id="premiumZeroDep1">
+      <div class="col-lg-12 col-md-12 col-sm-12" id="idvValue">
+        <span><h2>IDV: <strong>{{insurance.idv}}</strong></h2></span>
+      </div>
+
+      <br>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h2>Premium</h2>
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Rate (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="rate" type="number" class="form-control required" value={{insurance.rate}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="rateValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">OD Discount (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="odDiscount" type="number" class="form-control required" value={{insurance.odDiscount}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="odDiscountValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">CNG IDV (4%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="cngIdv" type="number" class="form-control required" value={{insurance.cngIdv}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="cngIdvValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Anti-theft (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="antiTheft" type="number" class="form-control required" value={{insurance.antiTheft}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="antiTheftValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">NCB Disount(%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="ncb" type="number" class="form-control required" value={{insurance.ncbDiscount}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="ncbValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="col-lg-4 col-md-4 col-sm-4 control-label">Basic Premium (A)</label>
+          <div class="col-lg-4 col-md-4 col-sm-4"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4" id="totalA"><h3><strong>{{insurance.totalBasicPremium}}</strong></h3></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h2>Dep Cover</h2>
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Zero Dep (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="zeroDep" type="number" class="form-control required" value={{insurance.zeroDep}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="zeroDepValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Consumables (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="consumables" type="number" class="form-control required" value={{insurance.consumables}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="consumablesValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Hydrostatic lock (Engine) (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="hydrostaticLock" type="number" class="form-control required" value={{insurance.hydrostaticLock}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="hydrostaticLockValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Tyres (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="tyres" type="number" class="form-control required" value={{insurance.tyres}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="tyresValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">RTI (%)</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="rti" type="number" class="form-control required" value={{insurance.rti}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="rtiValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <label class="col-lg-4 col-md-4 col-sm-4 control-label">Total Dep Cover (B)</label>
+          <div class="col-lg-4 col-md-4 col-sm-4"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4" id="totalB"><h3><strong>{{insurance.totalDepCover}}</strong></h3></div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Key Consumables and RSA</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="keyConsumablesRSA" type="number" class="form-control required" value={{insurance.keyConsumablesRSA}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="keyConsumablesRSAValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h2>Additions</h2>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Compulsory Additions</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="compulsaryAdditions" type="number" class="form-control required" value={{insurance.compulsaryAdditions}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="compulsaryAdditionsValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Third Party</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="thirdParty" type="number" class="form-control required" value={{insurance.thirdParty}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="thirdPartyValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Owner Driver</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="ownerDriver" type="number" class="form-control required" value={{insurance.ownerDriver}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="ownerDriverValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Paid Driver</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="paidDriver" type="number" class="form-control required" value={{insurance.paidDriver}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4pull-right" id="paidDriverValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">Passenger</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="passenger" type="number" class="form-control required" value={{insurance.passenger}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="passengerValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label class="col-lg-4 col-md-4 col-sm-4 control-label">CNG Third Party</label>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <input id="cngThirdParty" type="number" class="form-control required" value={{insurance.cngThirdParty}}>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 pull-right" id="cngThirdPartyValue">
+              <strong>0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <label class="col-lg-4 col-md-4 col-sm-4control-label">Total Additions (C)</label>
+          <div class="col-lg-4 col-md-4 col-sm-4"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4" id="totalC"><h3><strong>{{insurance.totalAdditions}}</strong></h3></div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 border-right">
+            <div class="row">
+              <h5 class="col-lg-6 col-md-6 col-sm-6 control-label">OD Premium (A+B+RSA)</h5>
+              <div class="col-lg-6 col-md-6 col-sm-6" id="totalAB"><h5><strong>{{insurance.odPremium}}</strong></h5></div>
+            </div>
+            <div class="row">
+              <h5 class="col-lg-6 col-md-6 col-sm-6 control-label">Commission Paid</h5>
+              <div class="col-lg-6 col-md-6 col-sm-6" id="commissionPaid"><h5><strong>{{insurance.commissionPaid}}</strong></h5></div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="row">
+                <h3 class="col-md-6 control-label">Total (A+B+C)</h3>
+                <div class="col-lg-6 col-md-6 col-sm-6" id="totalABC"><h3><strong>{{insurance.totalABC}}</strong></h3></div>
+            </div>
+
+            <div class="row">
+              <h3 class="col-lg-6 col-md-6 col-sm-6 control-label">Service Tax</h3>
+              <div class="col-lg-6 col-md-6 col-sm-6" id="serviceTax"><h3><strong>{{insurance.serviceTax}}</strong></h3></div>
+            </div>
+
+            <div class="row">
+              <h3 class="col-lg-6 col-md-6 col-sm-6 control-label">Grand Total</h3>
+              <div class="col-lg-6 col-md-6 col-sm-6" id="grandTotal"><h3><strong>{{insurance.grandTotal}}</strong></h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

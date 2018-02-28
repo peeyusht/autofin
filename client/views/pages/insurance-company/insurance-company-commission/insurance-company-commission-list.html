@@ -1,0 +1,35 @@
+<template name="insuranceCompanyCommissionList">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Commission</h5>
+        </div>
+        <div class="ibox-content">
+
+            <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-TeamCommissionList" >
+                <thead>
+                <tr>
+                    <th>Insurance Company</th>
+                    <th>Category</th>
+                    <th>Commission</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                  {{#each insuranceCompanyCommission}}
+                    <tr class="gradeX">
+                        <td>{{insuranceCompanyObj.name}}</td>
+                        <td>{{categoryObj.name}}</td>
+                        <td>{{commission}}</td>
+                        <td>
+                          <button id="edit" class="btn btn-primary btn-xs">Edit</button>
+                        </td>
+                    </tr>
+                  {{/each}}
+                </tbody>
+            </table>
+            {{> insuranceCompanyCommissionEdit}}
+            </div>
+        </div>
+    </div>
+</template>

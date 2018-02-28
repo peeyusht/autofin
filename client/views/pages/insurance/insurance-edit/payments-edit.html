@@ -1,0 +1,172 @@
+<template name="payments">
+  <div id="payments">
+    <div id="payments1">
+      <h2>Payments</h2>
+      <div class="row">
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div><h1><strong>1</strong></h1></div>
+          <div class="form-group">
+              <label>Cheque from</label>
+              <input id="chequeFrom1" type="text" class="form-control" value={{insurance.chequeFrom1}}>
+          </div>
+
+          <div class="form-group">
+              <label>Cheque No</label>
+              <input id="chequeNo1" type="text" class="form-control" value={{insurance.chequeNo1}}>
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Date</label>
+              <input id="chequeDate1" type="text" class="form-control" value={{insurance.chequeDate1}}>
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Amount</label>
+              <input id="chequeAmount1" type="text" class="form-control" value={{insurance.chequeAmount1}}>
+          </div>
+
+          <div class="form-group">
+              <label>Bank and Branch</label>
+              <input id="bankNBranch1" type="text" class="form-control" value={{insurance.bankNBranch1}}>
+          </div>
+
+          <div class="p-w-md">
+            <h4>Cheque Source</h4>
+            <div class="radio">
+              <input type="radio" id="source11" value="Client" name="source1" checked="">
+              <label for="inlineRadio1">Client</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="source12" value="Autofin" name="source1">
+              <label for="inlineRadio2">Autofin</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label>Remarks</label>
+              <textarea id="remarksPayment1" rows="4" class="form-control"></textarea>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div><h1><strong>2</strong></h1></div>
+          <div class="form-group">
+              <label>Cheque from</label>
+              <input id="chequeFrom2" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque No</label>
+              <input id="chequeNo2" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Date</label>
+              <input id="chequeDate2" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Amount</label>
+              <input id="chequeAmount2" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Bank and Branch</label>
+              <input id="bankNBranch2" type="text" class="form-control">
+          </div>
+
+          <div class="p-w-md">
+            <h4>Cheque Source</h4>
+            <div class="radio">
+              <input type="radio" id="source21" value="Client" name="source2" checked="">
+              <label for="inlineRadio1">Client</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="source22" value="Autofin" name="source2">
+              <label for="inlineRadio2">Autofin</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label>Remarks</label>
+              <textarea id="remarksPayment2" rows="4" class="form-control"></textarea>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div><h1><strong>3</strong></h1></div>
+          <div class="form-group">
+              <label>Cheque from</label>
+              <input id="chequeFrom3" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque No</label>
+              <input id="chequeNo3" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Date</label>
+              <input id="chequeDate3" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Cheque Amount</label>
+              <input id="chequeAmount3" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+              <label>Bank and Branch</label>
+              <input id="bankNBranch3" type="text" class="form-control">
+          </div>
+
+          <div class="p-w-md">
+            <h4>Cheque Source</h4>
+            <div class="radio">
+              <input type="radio" id="source31" value="Client" name="source3" checked="">
+              <label for="inlineRadio1">Client</label>
+            </div>
+            <div class="radio">
+              <input type="radio" id="source32" value="Autofin" name="source3">
+              <label for="inlineRadio2">Autofin</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label>Remarks</label>
+              <textarea id="remarksPayment3" rows="4" class="form-control"></textarea>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div class="hr-line-dashed"></div>
+
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+              <label>Final Premium (A+B+C)</label>
+              <div id="finalPremiumValue"><h3>0</h3></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+              <label>Cheque Amount</label>
+              <div id="chequeAmountValue"><h3>0</h3></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="form-group">
+              <label>SUBV/Short Premium</label>
+              <div id="shortPremiumValue"><h3>0</h3></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>

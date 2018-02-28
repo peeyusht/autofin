@@ -1,0 +1,81 @@
+<template name="insuranceCompanyCommissionAdd">
+
+  <div class="modal inmodal" id="insuranceCompanyCommissionAddModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<!--                  <i class="fa fa-user modal-icon"></i> -->
+                  <h4 class="modal-title"> Commission Add</h4>
+              </div>
+              <div class="modal-body">
+                <form id="form" action="#" class="wizard-big">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-6">
+                              <div class="form-group">
+                                <label>Team Name *</label>
+                                <div>
+                                    <select id="teamName" data-placeholder="Team Name" class="chosen-select" tabindex="2">
+                                      {{#each team}}
+                                        <option value={{_id}}>{{name}}</option>
+                                      {{/each}}
+                                    </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <strong>Team Details</strong>
+                                <br>
+                                <strong>Branch: </strong>{{teamDetails.branchObj.name}}
+                                <br>
+                                <strong>Address: </strong>{{teamDetails.address}}
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>Insurance Company *</label>
+                                  <div>
+                                      <select id="insuranceCompany" data-placeholder="Insurance Company" class="chosen-select" tabindex="2">
+                                        {{#each insuranceCompany}}
+                                          <option value={{_id}}>{{name}}</option>
+                                        {{/each}}
+                                      </select>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>Category *</label>
+                                  <div>
+                                      <select id="category" data-placeholder="Insurance Category" class="chosen-select" tabindex="2">
+                                        {{#each insuranceCategory}}
+                                          <option value={{_id}}>{{name}}</option>
+                                        {{/each}}
+                                      </select>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Commission *</label>
+                                <input id="commission" type="number" class="form-control required">
+                              </div>
+                            </div>
+                          </div>
+                    </fieldset>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button id="cancel" data-dismiss="modal" class="btn btn-white">Cancel</button>
+                <button id="save" type="button" class="btn btn-primary">Save</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>

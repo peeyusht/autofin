@@ -1,0 +1,71 @@
+<template name="insuranceCompanyReport">
+  <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                    <div class="row">
+                      <div class="col-lg-4, col-md-4, col-sm-4">
+                        <h5>Insurance Company Wise Report</h5>
+                      </div>
+                      <div class="col-lg-3, col-md-3, col-sm-3">
+<!--                        <label>Data Range</label> -->
+                        <div id="reportDateRange" class="form-control">
+                            <i class="fa fa-calendar"></i>
+                            <span></span> <b class="caret"></b>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2">
+                        <button id="go" class="btn btn-success">Go</button>
+<!--                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2"> -->
+                        <button id="reset" class="btn btn-warning">Reset</button>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="ibox-content">
+                    <div class="table-responsive">
+                     <table class="table table-striped table-bordered table-hover dataTables-example" >
+                          <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Tot UnBooked</th>
+                              <th>Tot UnBooked Prem.</th>
+                              <th>Tot Booked</th>
+                              <th>Tot Booked Prem.</th>
+                              <th>Commission Earned</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            {{#each insuranceCompany}}
+                              <tr class="gradeX">
+                                  <td>{{name}}</td>
+                                  <td>{{totalUnBooked}}</td>
+                                  <td>{{totalUnBookedPremium}}</td>
+                                  <td>{{totalBooked}}</td>
+                                  <td>{{totalBookedPremium}}</td>
+                                  <td>{{commissionEarned}}</td>
+                              </tr>
+                            {{/each}}
+                          </tbody>
+                          <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th>{{grandTotalUnBooked}}</th>
+                                <th>{{grandTotalUnBookedPremium}}</th>
+                                <th>{{grandTotalBooked}}</th>
+                                <th>{{grandTotalBookedPremium}}</th>
+                                <th>{{totalCommission}}</th>
+                            </tr>
+                          </tfoot>
+                      </table>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>

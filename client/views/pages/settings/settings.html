@@ -1,0 +1,94 @@
+<template name="settings">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Settings</h5>
+                    </div>
+                    <div class="ibox-content">
+                      <div class="row">
+                        <div class="tabs-container">
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">General</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Tax</a></li>
+<!--                            <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Registration Zone</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">Third Party Ins.</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="false">NCB</a></li> -->
+                          </ul>
+
+
+                          <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                              <div class="panel-body">
+                                <div class="row">
+                                  <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Company Name</label>
+                                        <input id="companyName" type="text" class="form-control required" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <textarea id="companyAddress" rows="4" class="form-control error" required></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Contact No.</label>
+                                        <input id="companyContactNo" type="text" class="form-control required" required>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                              <div class="panel-body">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                      <label>Service Tax (%)</label>
+                                      <input id="serviceTax" type="text" class="form-control required">
+                                      <button id="serviceTaxSaveButton" class="btn btn-primary">Save</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+<!--                            <div id="tab-3" class="tab-pane">
+                              <div class="panel-body">
+                                {{> registrationZoneList}}
+                              </div>
+                            </div>
+
+                            <div id="tab-4" class="tab-pane">
+                              <div class="panel-body">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                      <label>Third Party Insurance</label>
+                                      <input id="serviceTax" type="text" class="form-control required">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div id="tab-5" class="tab-pane">
+                              <div class="panel-body">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                      <label>No Claim Bonus</label>
+                                      <input id="serviceTax" type="text" class="form-control required">
+                                  </div>
+                                </div>
+                              </div>
+                            </div> -->
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

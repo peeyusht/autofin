@@ -1,0 +1,136 @@
+<template name="teamAdd">
+
+  <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                      <h5>Add Team</h5>
+<!--                      <button id="back" class="btn btn-info btn-outline pull-right">Back</button> -->
+                  </div>
+                  <div class="ibox-content">
+
+            <form id="form" action="#" class="wizard-big">
+              <fieldset>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Team Name *</label>
+                        <input id="teamName" type="text" class="form-control required" tabindex="1">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <div class="p-w-md">
+                        <h4>Team Type</h4>
+                        <div class="radio">
+                          <input type="radio" id="teamTypeRadio1" value="Inhouse" name="teamTypeRadio" checked tabindex="2">
+                          <label>Inhouse</label>
+                        </div>
+                        <div class="radio">
+                          <input type="radio" id="teamTypeRadio2" value="Broker" name="teamTypeRadio" tabindex="3">
+                          <label>Broker</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Branch *</label>
+                      <div>
+                          <select id="branch" data-placeholder="Branch" class="chosen-select" tabindex="4">
+                            {{#each branch}}
+                              <option value={{_id}}>{{name}}</option>
+                            {{/each}}
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Contact No.*</label>
+                        <input id="contactNo" type="text" class="form-control required" tabindex="5">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Email*</label>
+                        <input id="email" type="text" class="form-control" tabindex="6">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Address *</label>
+                      <textarea class="form-control" row="6" id="address" required tabindex="7"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+<!--                <hr />
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>PAN Card *</label>
+                        <input id="panCard" type="text" class="form-control" tabindex="8">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Bank Name *</label>
+                        <input id="bankName" type="text" class="form-control" tabindex="9">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Bank Branch *</label>
+                        <input id="bankBranch" type="text" class="form-control"  tabindex="10">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Bank Account Name*</label>
+                        <input id="bankAccountName" type="text" class="form-control" tabindex="11">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Bank Account No. *</label>
+                        <input id="bankAccountNo" type="text" class="form-control" tabindex="12">
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label>IFSC Code *</label>
+                        <input id="ifscCode" type="text" class="form-control" tabindex="13">
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="pull-right">
+                  <button id="save" class="btn btn-success">Save & Add Commission</button>
+                  <button id="cancel" class="btn btn-warning">Cancel</button>
+                </div>
+
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        {{# if commissionCreated}}
+          {{> teamCommissionList}}
+        {{/if}}
+
+      </div>
+    </div>
+  </div>
+</template>
